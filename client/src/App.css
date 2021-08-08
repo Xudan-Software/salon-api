@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+.Navbar{
+  background-color: #282c34;
+  color: azure;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
