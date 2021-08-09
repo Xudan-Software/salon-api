@@ -1,7 +1,5 @@
-package com.xuandjordan.salonapi.repository;
+package com.xuandjordan.salonapi.service;
 
-import com.xuandjordan.salonapi.SalonDetails;
-import com.xuandjordan.salonapi.entity.SalonServiceDetail;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SalonServiceDetailRepository extends

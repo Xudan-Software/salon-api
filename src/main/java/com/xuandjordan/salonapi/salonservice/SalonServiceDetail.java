@@ -1,4 +1,4 @@
-package com.xuandjordan.salonapi.entity;
+package com.xuandjordan.salonapi.service;
 
 
 import lombok.*;
