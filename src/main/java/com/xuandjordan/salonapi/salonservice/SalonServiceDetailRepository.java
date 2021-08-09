@@ -1,8 +1,8 @@
-package com.xuandjordan.salonapi.service;
+package com.xuandjordan.salonapi.salonservice;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SalonServiceDetailRepository extends
-    CrudRepository<SalonServiceDetail, Long> {
-    //todo:query method to be implemented
+    JpaRepository<SalonServiceDetail, Long> {
+
 }

@@ -1,10 +1,8 @@
-package com.xuandjordan.salonapi.repository;
+package com.xuandjordan.salonapi.slot;
 
-import com.xuandjordan.salonapi.entity.SalonServiceDetail;
-import com.xuandjordan.salonapi.entity.Slot;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SlotRepository extends
-    CrudRepository<Slot, Long> {
+    JpaRepository<Slot, Long> {
     //todo:query method to be implemented
 }
