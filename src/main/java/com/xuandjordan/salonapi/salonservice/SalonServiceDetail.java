@@ -1,7 +1,8 @@
-package com.xuandjordan.salonapi.entity;
+package com.xuandjordan.salonapi.salonservice;
 
-
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

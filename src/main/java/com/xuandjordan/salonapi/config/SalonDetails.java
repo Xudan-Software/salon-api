@@ -1,8 +1,7 @@
-package com.xuandjordan.salonapi;
+package com.xuandjordan.salonapi.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-
 
 @Configuration
 public class SalonDetails {
