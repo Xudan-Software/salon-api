@@ -10,31 +10,35 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-enum SlotStatus {
-    AVAILABLE, LOCKED, CONFIRMED, CANCELLED
-}
-
-
-
-
 @Entity
 @Data
 @NoArgsConstructor
 @ToString
 public class Slot {
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JsonIgnore
-    Set<SalonServiceDetail> availableServices;
-    String stylistName;
-    LocalDateTime slotFor;
-    LocalDateTime lockedAt;
-    LocalDateTime confirmedAt;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JsonIgnore
+    Set<SalonServiceDetail> availableServices;
+
     @ManyToOne
     private SalonServiceDetail selectedService;
+
+    String stylistName;
+
+    LocalDateTime slotFor;
+
+    LocalDateTime lockedAt;
+
+    LocalDateTime confirmedAt;
+
     private SlotStatus status;
 
+}
+
+enum SlotStatus {
+    AVAILABLE, LOCKED, CONFIRMED, CANCELLED
 }
