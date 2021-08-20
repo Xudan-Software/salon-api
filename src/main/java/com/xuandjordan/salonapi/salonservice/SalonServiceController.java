@@ -1,7 +1,8 @@
-package com.xuandjordan.salonapi.web;
+package com.xuandjordan.salonapi.salonservice;
 
+import com.xuandjordan.salonapi.salonservice.SalonService;
 import com.xuandjordan.salonapi.salonservice.SalonServiceDetail;
-import com.xuandjordan.salonapi.salonservice.SalonServiceDetailRepo;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,18 +13,20 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping(path = "/api/services",
-    produces = "application/json")
+@RequestMapping(path = "/api/services")
 @CrossOrigin(origins = "*")
 public class SalonServiceController {
-    private final SalonServiceDetailRepo salonServiceDetailRepo;
+    private final SalonService salonService;
 
-    public  SalonServiceController(final SalonServiceDetailRepo salonServiceDetailRepo){
-        this.salonServiceDetailRepo = salonServiceDetailRepo;
+    public SalonServiceController(SalonService salonService){
+        this.salonService= salonService;
     }
+
+
     @GetMapping("/retrieveAvailableSalonServices")
-    public List<SalonServiceDetail> findAllAvailableSalonServices() {
-        return salonServiceDetailRepo.findAll();
+    @ApiOperation(value = "RetrieveAvailableSalonServicesAPI")
+    public List<SalonServiceDetail> retrieveAvailableSalonServicesAPI() {
+        return salonService.findAll();
     }
 
 }

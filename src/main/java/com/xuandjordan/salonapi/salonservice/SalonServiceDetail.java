@@ -9,9 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 public class SalonServiceDetail {
     @Id
