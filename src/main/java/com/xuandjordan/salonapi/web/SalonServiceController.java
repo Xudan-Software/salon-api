@@ -16,7 +16,8 @@ import java.util.List;
     produces = "application/json")
 @CrossOrigin(origins = "*")
 public class SalonServiceController {
-    private SalonServiceDetailRepo salonServiceDetailRepo;
+    private final SalonServiceDetailRepo salonServiceDetailRepo;
+
     public  SalonServiceController(final SalonServiceDetailRepo salonServiceDetailRepo){
         this.salonServiceDetailRepo = salonServiceDetailRepo;
     }

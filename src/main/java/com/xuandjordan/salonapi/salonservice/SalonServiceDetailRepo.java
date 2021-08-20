@@ -16,16 +16,15 @@ import java.util.Optional;
 @Repository
 public class SalonServiceDetailRepo implements SalonServiceDetailRepository {
     private JdbcTemplate jdbc;
-
+    private final String SQL_GET_ALL = "select * from salon_service_detail";
 
     @Autowired
     public SalonServiceDetailRepo(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
 
-
     @Override public List<SalonServiceDetail> findAll() {
-        return jdbc.query("select id, name, description, price, time_in_minutes from salon_service_detail",
+        return jdbc.query(SQL_GET_ALL,
             this::mapRowToAvailableService);
 
     }
