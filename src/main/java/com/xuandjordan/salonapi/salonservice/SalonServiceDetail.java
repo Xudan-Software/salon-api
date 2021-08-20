@@ -1,9 +1,6 @@
 package com.xuandjordan.salonapi.salonservice;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +11,7 @@ import javax.persistence.Id;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class SalonServiceDetail {
     @Id
